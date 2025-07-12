@@ -1,0 +1,94 @@
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      width: 350px;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <input type="hidden" name="access_key" value="cc35e191-7e47-4b58-8c83-17b89257bee7">
+    <h2>User Info Form</h2>
+    <form action="https://api.web3forms.com/submit" method="POST" >
+
+      <input type="text" name="full_name" placeholder="Full Name" required>
+      <input type="text" name="last_name" placeholder="Last Name" required>
+      <input type="email" name="email" placeholder="Email ID" required>
+      <input type="tel" name="mobile" placeholder="Mobile Number" required>
+      
+      <label for="service">What kind of website you need?</label>
+      <select name="service" id="service" required>
+        <option value="">Select an option</option>
+        <option value="ecommerce">E-commerce Website</option>
+        <option value="store">Store Website</option>
+        <option value="personal">Personal Website</option>
+        <option value="portfolio">Portfolio Website</option>
+        <option value="other">Other</option>
+      </select>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <link rel="stylesheet" href="style.css">
+</body>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Ticket Booking</title>
+</head>
+<body>
+  <h1>🎟️ Book Your Ticket</h1>
+  <form id="ticketForm">
+    <label>Name: <input type="text" id="name" required></label><br><br>
+    <label>Email: <input type="email" id="email" required></label><br><br>
+    <label>Event:
+      <select id="event">
+        <option value="concert">Concert</option>
+        <option value="sail">50% off </option>
+        <option value="workshop">Workshop</option>
+      </select>
+    </label><br><br>
+    <button type="submit">Book Ticket</button>
+  </form>
+
+  <div id="ticketOutput"></div>
+
+  <script>
+    document.getElementById('ticketForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const event = document.getElementById('event').value;
+      document.getElementById('ticketOutput').innerHTML =
+        `<h2>🎉 Ticket Confirmed!</h2><p>Name: ${name}</p><p>Event: ${event}</p>`;
+    });
+  </script>
+</body>
+</html>
+
+</html>

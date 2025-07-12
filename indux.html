@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>weblopar| Web Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="booking" href="booking.html">
+  <link rel="store" href="store.html">
+   <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .lock-screen {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #111;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .lock-screen input {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      width: 200px;
+    }
+
+    .lock-screen button {
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+
+    .main-content {
+      display: none;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="lock-screen">
+  <h2>Enter Password to Access</h2>
+  <input type="password" id="passwordInput" placeholder="Enter password">
+  <button onclick="checkPassword()">Unlock</button>
+  <div class="error" id="errorMsg"></div>
+</div>
+
+<div class="main-content" id="mainContent">
+  <h1>🎉 Welcome to the Website!</h1>
+  <p>This is the content of your site that shows only after entering the correct password.</p>
+</div>
+
+<script>
+  const correctPassword = "rajmeena"; // You can change this
+
+  function checkPassword() {
+    const input = document.getElementById("passwordInput").value;
+    const error = document.getElementById("errorMsg");
+
+    if (input === correctPassword) {
+      document.querySelector(".lock-screen").style.display = "none";
+      document.getElementById("mainContent").style.display = "block";
+    } else {
+      error.textContent = "Wrong password! Try again.";
+    }
+  }
+</script>
+
+</body>
+</html>
+  <style>
+    .insta-btn {
+      background-color: #e1306c;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gaurav Meena</h1>
+    <p>Creative Web Developer & Designer</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="booking.html">booking</a>
+      <a href="store.html">store</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h2>I Build Stunning Websites 🚀</h2>
+    <h3>CBSE web developer project by Gaurav Meena class 9 B</h3>
+    <p> Carmel Convent Senior Secondary School Ratanpur Bhopal (MP)</p>
+    <p>From portfolios to business pages, I got you covered!</p>
+    <a href="#contact">Let's Work Together</a>
+    <br>
+    <a class="insta-btn" href="https://www.instagram.com/direct/t/gouravmeena4430" target="_blank">
+      Message Me on Instagram: "I need a website"
+    </a>
+    
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm Gaurav Meena, a passionate web developer helping brands grow online through responsive, modern websites. Whether you're a freelancer, small business, or influencer — I can help you build your online presence!</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Portfolio Websites</li>
+      <li>Business Landing Pages</li>
+      <li>E-commerce Store Setup</li>
+      <li>Custom Web Design</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email:gouravmeena9926@gmail.com</p>
+    <p>WhatsApp: +91 9926596215</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Gaurav Meena | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
